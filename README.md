@@ -1,2 +1,2 @@
-# GalichCZ.github.io
+# Даниил Галицкий
 My First WebSite 
