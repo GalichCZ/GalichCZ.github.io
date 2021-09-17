@@ -1,19 +1,744 @@
-ul {
-   justify-content: space-between;
-   display: flex;
-   text-align: center; 
-}    
-
-.menu {
-    width: 80%;
-    text-align: right;
+body{
+    font-family: Arial, sans-serif;
 }
 
-ul li{
-    list-style: none;
-    display: inline-block;
+/*NAVIGATION MENU*/
+nav{
+    width: 100%;
+    height: 60px;
+    background: #344051;
 }
 
-ul li a{
-    text-decoration: none;
+.logo{
+    line-height: 60px;
+    font-size: 20px;
+    padding-left: 280px;
+    float: left;
+    color: #fff;
+}
+
+.menu{
+    float: left;
+    padding-left: 400px;
+}
+
+.menu li{
+    float: left;
+    line-height: 60px;
+    font-size: 13px;
+    margin-right: 30px;
+    color: #fff;
+}
+
+
+/*MAIN PAGE*/
+.main{
+    width: 100%;
+    height: calc(100% - 60px);
+    background-color: beige;
+}
+
+.title-container{
+    float: left;
+    text-align: center;
+    margin-top: 300px;
+    margin-left: 350px;
+}
+
+.title-container h1{
+    font-size: 60px;
+    font-weight: bold;
+    color: #2c384a;
+    word-spacing: -5px;
+    letter-spacing: -1px;
+}
+
+.title-container h4{
+    font-size: 25px;
+    color: #888f9a;
+    margin-top: 35px;
+    margin-left: -10px;
+}
+
+.title-portrait img{
+    margin:-449px 0 0 900px;
+    text-align: center
+}
+
+.title-container input{
+    background: none;
+    border: 1px solid #6d7682;
+    margin: 30px 16px 0 10px; 
+    height: 40px;
+    border-radius: 5px;
+    color: #6d7682;
+    font-size: 16px;
+    padding: 0px 13px;
+}
+
+/*ABOUT ME PAGE*/
+
+.about-me{
+    background: #fff;
+    height: 500px;
+    box-shadow: 0 -2px 90px #7e8185;
+}
+
+.about-me-title{
+    float: left;
+    text-align: center;
+    margin:80px 0 0 650px;
+}
+
+.about-me-title h2{
+    color: #2c384a;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.about-text-line{
+    float: left;
+    content: '';
+    height: 2px;
+    background: #f44336;
+    width: 70px;
+    margin: 120px 100px 0 -98px;
+}
+
+.portrait img{
+    float: left;
+    display: flex;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    margin: 150px 0 0 -210px;
+    
+}
+
+.about-me-desc{
+    float: left;
+    text-align: center;
+    margin:215px 0 0 200px;
+}
+
+.about-me-desc p {
+    padding-bottom: 30px;
+    color: #2c384a;
+}
+
+.about-me input{
+    float: left;
+    margin: 305px 0 0 -570px;
+    background: none;
+    border: 1px solid #6d7682;
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 5px;
+    color: #6d7682;
+    font-size: 16px;
+}
+
+/*SKILLS*/
+
+.skills{
+    background: url(file:///Users/galich/Desktop/CourseWebSites/src/img/bg.jpg);
+    height: 450px;
+    width: 100%;
+}
+
+.what{
+    float: left;
+    text-align: center;
+    margin:70px 0 0 630px;
+}
+
+.what h2{
+    color: #2c384a;
+    font-size: 23px;
+    text-transform: uppercase;
+    word-spacing: -1px;
+}
+
+.what-line{
+    float: left;
+    content: '';
+    height: 2px;
+    background: #f44336;
+    width: 85px;
+    margin: 110px 100px 0px -145px;
+}
+
+.skills ul{
+    float: left;
+    margin: 100px 0 0 315px;
+}
+
+.skills li{
+    float: left;
+    margin-right: 200px;
+}
+
+.webDesign{
+    float: left;
+    text-align: center;
+    width: 200px;
+    margin: 15px 0 0 245px ;
+}
+
+.webDesign h3{
+    color: #f44336;
+    margin-bottom: 10px;
+    font-weight: bold;
+    
+}
+
+.develop{
+    float: left;
+    text-align: center;
+    width: 200px;
+    margin: 15px 0 0 50px;
+}
+
+.develop h3{
+    color: #f44336;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.optimisation{
+    float: left;
+    text-align: center;
+    width: 200px;
+    margin: 15px 0 0 50px;
+}
+
+.optimisation h3{
+    color: #f44336;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.marketing{
+    float: left;
+    text-align: center;
+    width: 200px;
+    margin: 15px 0 0 50px;
+}
+
+.marketing h3{
+    color: #f44336;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/*KEYSES*/
+
+.keysPresent{
+    background: #fff;
+    height: 100vh;
+}
+
+.keys{
+    float: left;
+    text-align: center;
+    margin: 50px 0 0 430px;
+}
+
+.keys h2{
+    font-size: 30px;
+    color: #384354;
+    margin-bottom: 10px;
+}
+
+.keysLine{
+    float: left;
+    content: '';
+    height: 4px;
+    background: #f44336;
+    width: 85px;
+    margin: 10px 100px 0px 263px;
+}
+
+.keys p{
+    margin-top: 50px;
+}
+
+.scroll img{
+    width: 50%;
+    height: 400px;
+    float: left;
+    margin: 40px 0 0 365px;
+}
+
+.client{
+    float: left;
+    text-align: left;
+    margin: 460px 0 0 -720px; 
+}
+
+.client h4{
+    font-size: 20px;
+    color: #384354;
+    margin-bottom: 7px;
+}
+
+.client p{
+    color: #384354;
+}
+
+.website{
+    float: left;
+    text-align: left;
+    margin: 520px 0 0 -720px; 
+}
+
+.website h4{
+    font-size: 20px;
+    color: #384354;
+    margin-bottom: 7px;
+}
+
+.website p{
+    color: #384354;
+}
+
+.btn input{
+    float: left;
+    text-align: center;
+    margin: 580px 0 0 -720px;
+    height: 40px;
+    width: 150px;
+    border: solid 2px #63b5ae;
+    background: #63b5ae;
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+}
+
+.projectName{
+    float: left;
+    text-align: left;
+    width: 520px;
+    margin: 15px 0 0 620px;
+}
+
+.projectName h4{
+    font-size: 20px;
+    color: #384354;
+    margin-bottom: 7px;
+}
+
+.projectName p{
+     color: #384354;
+}
+
+/*PRICE COUNTER*/
+
+.priceCount{
+    height: 80vh;
+}
+
+.priceCount h2{
+    font-weight: bold;
+    font-size: 40px;
+    margin: 100px 0 0 600px;
+    color: #384354;
+    letter-spacing: 2px;
+}
+
+.siteType{
+    float: left;
+    margin: 40px 0 0 380px;
+}
+
+.siteType h4{
+    font-weight: bold;
+    font-size: 20px;
+    color: #384354;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.siteType input{
+    background: #eee;
+    line-height: 40px;
+    width: 750px;
+}
+
+.design{
+    float: left;
+    margin: 40px 0 0 380px;
+}
+
+.design h4{
+    font-weight: bold;
+    font-size: 20px;
+    color: #384354;
+    letter-spacing: 1px;
+    margin-bottom: 10px; 
+}
+
+.design input{
+    background: #eee;
+    line-height: 40px;
+    width: 750px;
+}
+
+.adaptivity{
+    float: left;
+    margin: 40px 0 0 380px;
+}
+
+.adaptivity h4{
+    font-weight: bold;
+    font-size: 20px;
+    color: #384354;
+    letter-spacing: 1px;
+    margin-bottom: 10px; 
+}
+
+.adaptivity input{
+    background: #eee;
+    line-height: 40px;
+    width: 750px;
+}
+
+.counterLine{
+    float: left;
+    content: '';
+    height: 2px;
+    background: #e0dede;
+    width: 750px;
+    margin: 40px 0 0 380px;
+}
+
+.deadline{
+    float: left;
+    line-height: 20px;
+    width: 750px;
+    margin: 40px 0 0 380px;
+}
+
+.deadline h6{
+    font-size: 20px;
+    color: #384354;
+}
+
+.deadline p{
+    float: left;
+    font-size: 20px;
+    color: #384354;
+    margin: -12px 0 0 740px;
+    /* не знаю как контролировать число, чтобы не выходило за границу*/
+}
+
+.cost{
+    float: left;
+    line-height: 20px;
+    width: 750px;
+    margin: 100px 0 0 -750px;
+}
+
+.cost h6{
+    font-size: 20px;
+    color: #384354;
+}
+
+.cost p{
+    float: left;
+    font-size: 20px;
+    margin: -15px 0 0 740px;
+    color: #384354;
+}
+
+/*statistics*/
+
+.statPresent{
+    background: url(file:///Users/galich/Desktop/CourseWebSites/src/img/bgStat.png);
+    height: 50vh;
+    width: 100%;
+}
+
+.statistics{
+    float:left; 
+    margin: 50px 0 50px 650px;
+}
+
+.statistics h2{
+    font-size: 30px;
+    color: #384354;
+}
+
+.statLine{
+    float: left;
+    content: '';
+    height: 4px;
+    background: #f44336;
+    width: 85px;
+    margin: 100px 0 0 -98px;
+}
+
+.happy{
+    float: left;
+    text-align: center;
+    margin: 200px 0 0 -420px;
+}
+
+.happy h2{
+    color: #2c384a;
+    font-size: 23px;
+    text-transform: uppercase;
+    word-spacing: -1px;
+    margin: 15px 0 10px 0;
+}
+
+.happy p{
+    color: #2c384a;
+}
+
+.hours{
+    float: left;
+    text-align: center;
+    margin: 200px 0 0 -190px;
+}
+
+.hours h2{
+    color: #2c384a;
+    font-size: 23px;
+    text-transform: uppercase;
+    word-spacing: -1px;
+    margin: 20px 0 10px 0;
+}
+
+.hours p{
+    color: #2c384a;
+}
+
+.doneProjects{
+    float: left;
+    text-align: center;
+    margin: 200px 0 0 0px;
+}
+
+.doneProjects h2{
+    color: #2c384a;
+    font-size: 23px;
+    text-transform: uppercase;
+    word-spacing: -1px;
+    margin: 20px 0 10px 0;
+}
+
+.doneProjects p{
+    color: #2c384a;
+}
+
+.achiv{
+    float: left;
+    text-align: center;
+    margin: 200px 0 0 100px;
+}
+
+.achiv h2{
+    color: #2c384a;
+    font-size: 23px;
+    text-transform: uppercase;
+    word-spacing: -1px;
+    margin: 15px 0 10px 0;
+}
+
+.achiv{
+    color: #2c384a;
+}
+
+/*TESTIMONIALS*/
+
+.testimonialPresent{
+    height: 50vh;
+}
+
+.testimonials{
+    float: left;
+    text-align: center;
+    margin: 50px 0 0 360px;
+}
+
+.testimonials h2{
+    color: #2c384a;
+    font-size: 30px;
+    text-transform: uppercase;
+    word-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.testLine{
+    float: left;
+    content: '';
+    height: 4px;
+    background: #f44336;
+    width: 85px;
+    margin: 0px 0 0 305px;
+}
+
+.testimonials img{
+    margin: 30px 0 20px -400px;
+}
+
+.testimonials p{
+    margin-bottom: 10px;
+    width: 700px;
+    color: #2c384a;
+    font-size: 17px;
+}
+
+.name{
+    font-weight: bold;
+}
+
+/*FOOTER*/
+
+footer{
+    height: 100vh;
+    background: #434e5f;
+}
+
+.contacs{
+    float: left;
+    margin: 40px 0 0 630px;
+}
+
+.contacs h2{
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    word-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.contactsLine{
+    float: left;
+    content: '';
+    height: 4px;
+    background: #f44336;
+    width: 85px;
+    margin: 90px 0 0 -120px;
+}
+
+.contactsDesc p{
+    float: left;
+    text-align: center;
+    margin: 120px 0 0 -450px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.location{
+    float: left;
+    margin: 180px 0 0 -730px;
+    text-align: center;
+}
+
+.mail{
+    float: left;
+    margin: 180px 0 0 -420px;
+    text-align: center;
+}
+
+.numberImg{
+    float: left;
+    margin: 180px 0 0 -110px;
+    text-align: center;
+}
+
+.number{
+    float: left;
+    margin: 215px 0 0 -190px;
+}
+
+.location p{
+    margin: 10px 0 0 0;
+    color: #fff;
+}
+
+.mail p{
+    margin: 10px 0 0 0;
+    color: #fff;
+}
+
+.number a{
+    text-align: center;
+    padding: 40px;
+    color: #fff;
+}
+
+.leaveMsg{
+    float: left;
+    margin: 40px 0 0 500px;
+}
+
+.msgTitle h2{
+    margin: 10px 0 20px 140px; 
+    font-size: 20px;
+    color: #fff;
+}
+
+.msgForm{
+    margin-left: -150px;
+}
+
+.msgForm input{
+    float: left;
+    text-align: center;
+    width: 350px;
+    height: 35px;
+    margin: 0 20px 0 0; 
+}
+
+.msgForm textarea{
+    margin: 30px 0 0 0px;
+    height: 70px;
+    width: 720px;
+}
+
+.copyright{
+    float: left;
+    line-height: 60px;
+    margin-top: -2px;
+    background: #354051;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    
+}
+
+.map iframe{
+    margin-top: 35px; 
+    height: 300px;
+    width: 100%;
+}
+
+.sendBtn{
+    float: left;
+    margin: 20px 0 0 210px;
+}
+
+.sendBtn input{
+    background: none;
+    border: solid 2px #fff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 100px;
+    font-size: 15px;
+    margin-left: -45px;
+}
+
+.icons{
+    float: left;
+    margin: 90px 0 0 -110px;
+}
+
+.icons i{
+    padding-right: 40px;
+    color: #fff;
 }
