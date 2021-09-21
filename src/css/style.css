@@ -7,6 +7,10 @@ nav{
     width: 100%;
     height: 60px;
     background: #344051;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
 }
 
 .logo{
@@ -15,34 +19,98 @@ nav{
     padding-left: 280px;
     float: left;
     color: #fff;
+    -webkit-animation: come 2s;
+    -o-animation: come 2s ;
+    animation: come 2s ;
 }
 
-.menu{
-    float: left;
-    padding-left: 400px;
+@keyframes come{
+    from{
+        opacity: 0%;
+    }
+    
+    to{
+        opacity: 100%;
+    }
 }
 
-.menu li{
+.menu ul{
+    margin-right: 50px;
+}
+
+.menu ul li{
     float: left;
     line-height: 60px;
+    display: inline-block;
+    position: relative;
+    padding-right:30px;
+    -webkit-animation: drop 1s forwards;
+    -o-animation: drop 1s forwards;
+    animation: drop 1s forwards;
+    opacity: 0;
+}
+
+.menu ul li a{
     font-size: 13px;
-    margin-right: 30px;
     color: #fff;
 }
 
+.menu ul li::after{
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #fff;
+	display: block;
+	margin: -10px 0 0 0;
+    border-radius: 5px;
+	transition: 0.5s;
+}
+.menu ul li:hover::after{
+	width: 100%;
+}
+
+@keyframes drop{
+    from{
+        opacity: 0;
+        margin-top: -80px;
+    }
+    
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+.menu ul li:nth-child(2){
+    animation-delay: 0.4s;
+}
+.menu ul li:nth-child(3){
+    animation-delay: 0.8s;
+}
+.menu ul li:nth-child(4){
+    animation-delay: 1.2s;
+}
+.menu ul li:nth-child(5){
+    animation-delay: 1.6s;
+}
+.menu ul li:nth-child(6){
+    animation-delay: 2.0s;
+}
 
 /*MAIN PAGE*/
 .main{
     width: 100%;
-    height: calc(100% - 60px);
-    background-color: beige;
+    height: 100%;
+    background: linear-gradient(rgba(245, 245, 220, 0.2), rgba(245, 245, 220, 1));
+
 }
 
 .title-container{
     float: left;
     text-align: center;
     margin-top: 300px;
-    margin-left: 350px;
+    margin-left: 280px;
+    display: block;
 }
 
 .title-container h1{
@@ -51,49 +119,110 @@ nav{
     color: #2c384a;
     word-spacing: -5px;
     letter-spacing: -1px;
+    opacity: 0;
+    animation: appearTitle 0.7s ease forwards;
+    animation-delay: 1.6s;
 }
 
 .title-container h4{
     font-size: 25px;
     color: #888f9a;
     margin-top: 35px;
-    margin-left: -10px;
+    display: block;
+    opacity: 0;
+    animation: appearTitle 0.7s ease forwards;
+    animation-delay: 2.0s;
 }
 
-.title-portrait img{
-    margin:-449px 0 0 900px;
-    text-align: center
-}
-
-.title-container input{
+.title-container .mainBtns input{
     background: none;
     border: 1px solid #6d7682;
-    margin: 30px 16px 0 10px; 
+    margin: 20px ;
+    display: inline-block;
     height: 40px;
     border-radius: 5px;
     color: #6d7682;
     font-size: 16px;
     padding: 0px 13px;
+    transition: 0.3s;
 }
+
+.mainBtns{
+    opacity: 0;
+    animation: appearTitle 0.7s ease forwards;
+    animation-delay: 2.4s;
+}
+
+/*#firstBtn{
+    opacity: 0;
+    animation: appearMain 0.7s  forwards;
+    animation-delay: 3.2s;
+}
+
+#secondBtn{
+    opacity: 0;
+    animation: appearMain 0.7s  forwards;
+    animation-delay: 2.8s;
+}*/
+
+.title-container .mainBtns input:hover{
+    background: #6d7682; 
+    color:beige;
+    transition: 0.3s;
+}
+
+.title-container .mainBtns input:active{
+    transform: scale(0.9);
+    transition: 0.2s;
+}
+
+@keyframes appearTitle{
+    from{
+        opacity: 0;
+        margin-left: -500px;
+    }
+    
+    to{
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+
+.title-portrait img{
+    float: left;
+    position: relative;
+    margin:-399px 0 0 860px;
+    display: block;
+    opacity: 0;
+    animation: imgAppear 1s forwards;
+}
+
+@keyframes imgAppear{
+    from{
+        opacity: 0;
+        margin-left: 1300px; 
+    }
+    
+    to{
+        opacity: 1;
+        margin-right: 0;
+    }
+}
+
 
 /*ABOUT ME PAGE*/
 
 .about-me{
     background: #fff;
-    height: 500px;
+    height: 50vh;
     box-shadow: 0 -2px 90px #7e8185;
 }
 
 .about-me-title{
     float: left;
     text-align: center;
-    margin:80px 0 0 650px;
-}
-
-.about-me-title h2{
-    color: #2c384a;
-    font-size: 25px;
-    text-transform: uppercase;
+    display: block;
+    margin:30px 0 0 650px;
 }
 
 .about-text-line{
@@ -102,7 +231,14 @@ nav{
     height: 2px;
     background: #f44336;
     width: 70px;
-    margin: 120px 100px 0 -98px;
+    margin: 70px 100px 0 -100px;
+    display: block;
+}
+
+.about-me-title h2{
+    color: #2c384a;
+    font-size: 25px;
+    text-transform: uppercase;
 }
 
 .portrait img{
@@ -112,24 +248,25 @@ nav{
     height: 150px;
     width: 150px;
     text-align: center;
-    margin: 150px 0 0 -210px;
+    margin: 90px 0 0 -215px;
     
 }
 
 .about-me-desc{
     float: left;
     text-align: center;
-    margin:215px 0 0 200px;
+    margin:195px 0 0 200px;
 }
 
 .about-me-desc p {
     padding-bottom: 30px;
     color: #2c384a;
+    line-height: 8px;
 }
 
 .about-me input{
     float: left;
-    margin: 305px 0 0 -570px;
+    margin: 275px 0 0 -575px;
     background: none;
     border: 1px solid #6d7682;
     height: 40px;
@@ -137,13 +274,25 @@ nav{
     border-radius: 5px;
     color: #6d7682;
     font-size: 16px;
+    transition: 0.5s;
+}
+
+.about-me input:hover{
+    background: #6d7682; 
+    color:white;
+    transition: 0.5s;
+}
+
+.about-me input:active{
+    transform: scale(0.9);
+    transition: 0.2s;
 }
 
 /*SKILLS*/
 
 .skills{
-    background: url(file:///Users/galich/Desktop/CourseWebSites/src/img/bg.jpg);
-    height: 450px;
+    background: url(../img/bg.jpg);
+    height: 50vh;
     width: 100%;
 }
 
@@ -177,6 +326,12 @@ nav{
 .skills li{
     float: left;
     margin-right: 200px;
+    transition: 0.5s;
+}
+
+.skills li:hover{
+   transform: scale(1.25);
+   transition: 0.5s; 
 }
 
 .webDesign{
@@ -184,13 +339,19 @@ nav{
     text-align: center;
     width: 200px;
     margin: 15px 0 0 245px ;
+    transition: 0.5s;
+}
+
+.webDesign:hover{
+   transform: scale(1.25);
+   transition: 0.5s; 
 }
 
 .webDesign h3{
     color: #f44336;
     margin-bottom: 10px;
     font-weight: bold;
-    
+    transition: 0.5s;
 }
 
 .develop{
@@ -198,6 +359,12 @@ nav{
     text-align: center;
     width: 200px;
     margin: 15px 0 0 50px;
+    transition: 0.5s;
+}
+
+.develop:hover{
+   transform: scale(1.25);
+   transition: 0.5s; 
 }
 
 .develop h3{
@@ -211,6 +378,12 @@ nav{
     text-align: center;
     width: 200px;
     margin: 15px 0 0 50px;
+    transition: 0.5s;
+}
+
+.optimisation:hover{
+   transform: scale(1.25);
+   transition: 0.5s; 
 }
 
 .optimisation h3{
@@ -224,6 +397,12 @@ nav{
     text-align: center;
     width: 200px;
     margin: 15px 0 0 50px;
+    transition: 0.5s;
+}
+
+.marketing:hover{
+   transform: scale(1.25);
+   transition: 0.5s; 
 }
 
 .marketing h3{
@@ -242,7 +421,8 @@ nav{
 .keys{
     float: left;
     text-align: center;
-    margin: 50px 0 0 430px;
+    margin: 30px 0 0 430px;
+    display: block;
 }
 
 .keys h2{
@@ -254,7 +434,7 @@ nav{
 .keysLine{
     float: left;
     content: '';
-    height: 4px;
+    height: 2px;
     background: #f44336;
     width: 85px;
     margin: 10px 100px 0px 263px;
@@ -314,6 +494,17 @@ nav{
     border-radius: 5px;
     font-size: 15px;
     color: white;
+    transition: 0.5s;
+}
+
+.btn input:hover{
+    transform: scale(1.07);
+    transition: 0.5s;
+}
+
+.btn input:active{
+    transform: scale(0.9);
+    transition: 0.2s;
 }
 
 .projectName{
@@ -335,14 +526,20 @@ nav{
 
 /*PRICE COUNTER*/
 
+.calculate{
+    height: 100vh;
+    background: linear-gradient(rgba(245, 245, 220, 0.2), rgba(253, 238, 225, 0.8));
+}
+
 .priceCount{
-    height: 80vh;
+    float: left;
+    margin-top: 80px;
 }
 
 .priceCount h2{
     font-weight: bold;
     font-size: 40px;
-    margin: 100px 0 0 600px;
+    margin: 10px 0 0 600px;
     color: #384354;
     letter-spacing: 2px;
 }
@@ -455,7 +652,7 @@ nav{
 /*statistics*/
 
 .statPresent{
-    background: url(file:///Users/galich/Desktop/CourseWebSites/src/img/bgStat.png);
+    background: url(../img/bgStat.png);
     height: 50vh;
     width: 100%;
 }
@@ -483,6 +680,12 @@ nav{
     float: left;
     text-align: center;
     margin: 200px 0 0 -420px;
+    transition: 0.5s;
+}
+
+.happy:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
 }
 
 .happy h2{
@@ -501,6 +704,12 @@ nav{
     float: left;
     text-align: center;
     margin: 200px 0 0 -190px;
+    transition: 0.5s;
+}
+
+.hours:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
 }
 
 .hours h2{
@@ -519,6 +728,12 @@ nav{
     float: left;
     text-align: center;
     margin: 200px 0 0 0px;
+    transition: 0.5s;
+}
+
+.doneProjects:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
 }
 
 .doneProjects h2{
@@ -537,6 +752,12 @@ nav{
     float: left;
     text-align: center;
     margin: 200px 0 0 100px;
+    transition: 0.5s;
+}
+
+.achiv:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
 }
 
 .achiv h2{
@@ -545,10 +766,6 @@ nav{
     text-transform: uppercase;
     word-spacing: -1px;
     margin: 15px 0 10px 0;
-}
-
-.achiv{
-    color: #2c384a;
 }
 
 /*TESTIMONIALS*/
@@ -591,7 +808,9 @@ nav{
     font-size: 17px;
 }
 
-.name{
+#name{
+    margin-top: 40px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -731,6 +950,18 @@ footer{
     width: 100px;
     font-size: 15px;
     margin-left: -45px;
+    transition: 0.3s;
+}
+
+.sendBtn input:hover{
+    background: #fff;
+    color: #354051;
+    transition: 0.3s;
+}
+
+.sendBtn input:active{
+    transform: scale(0.9);
+    transform: 0.2s;
 }
 
 .icons{
