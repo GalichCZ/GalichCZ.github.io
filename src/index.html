@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Course Web Site</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	
@@ -12,56 +13,71 @@
 <body>
     <header> 
         <nav>
-            <div class="logo">Daniil Galitskii</div>
-            
-            <div class="menu">
-                <ul>
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">SERVICES</a></li>
-                    <li><a href="">KEYS</a></li>
-                    <li><a href="">PRICE</a></li>
-                    <li><a href="">TESTIS</a></li>
-                    <li><a href="">CONTACTS</a></li>
-                </ul>
-            </div>  
+           <div class="container">
+               <div class="row justify-content-center">
+                   <div class="col-2">
+                       <div class="logo">Daniil Galitskii</div>
+                   </div>
+
+                   <div class="col-6">
+                       <div class="menu ">
+                            <ul>
+                                <li><a href="">ABOUT</a></li>
+                                <li><a href="">SERVICES</a></li>
+                                <li><a href="">KEYS</a></li>
+                                <li><a href="">PRICE</a></li>
+                                <li><a href="">TESTIS</a></li>
+                                <li><a href="">CONTACTS</a></li>
+                            </ul>
+                       </div> 
+                   </div>
+               </div>
+            </div>
         </nav> 
     </header>
     
-    <div class="main">
-        <div class="title-container">
-            <h1>Hello<br>I'm Daniil Galitskii</h1>
-            <h4>Web developer</h4>
-            <div class="mainBtns">
-                <input id="firstBtn" type="button" value="About Me">
-                <input id="secondBtn" type="button" value="Portfolio">
+    <section class="main">
+        <div class="container">
+            <div class="row ">
+                <div class="title-container col-6 offset-1">
+                    <h1>Hello<br>I'm Daniil Galitskii</h1>
+                    <h4>Web developer</h4>
+                    <div class="mainBtns">
+                    <input id="firstBtn" type="button" value="About Me">
+                    <input id="secondBtn" type="button" value="Portfolio">
             </div>
-            
         </div>
-        <div class="title-portrait">
+        
+        <div class="title-portrait col-3 offset-7 ">
             <img src="img/me-main.png" alt="">
-            
         </div>
-    </div>
+            </div>
+        </div>
+        
+    </section>
     
     <section class="about">
-        <div class="about-me">
-            <div class="about-me-title">
-                <h2>About Me</h2>
-            </div>
+       <div class="container">
+           <div class="row justify-content-center">
+               <div class="about-me ">
+                    <div class="about-me-title col-4">
+                        <h2>About Me</h2>
+                    </div>
             
-            <div class="about-text-line"></div>
+                    <div class="portrait d-block mx-auto">
+                        <img src="img/portrait.png" alt="">
+                    </div>
             
-            <div class="portrait">
-                <img src="img/portrait.png" alt="">
-            </div>
-            
-            <div class="about-me-desc">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum consequuntur commodi, debitis ex doloremque labore dolores aliquam repellendus dicta natus?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam doloribus eum quia delectus ipsa, quis officia necessitatibus iure alias quas?</p>
-            </div>
-            
-            <input type="submit" value="Download Resume">
+                    <div class="about-me-desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum consequuntur commodi, debitis ex doloremque labore dolores aliquam repellendus dicta natus?</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam doloribus eum quia delectus ipsa, quis officia necessitatibus iure alias quas?</p>
+                    </div>
+
+                    <input class="" type="submit" value="Download Resume">
+                </div>
+           </div>
        </div>
+        
     </section>
     
     <section class="skillPresent">
@@ -87,8 +103,15 @@
                </li>
            </ul>
            
-           <div class="webDesign">
-               
+           <ul>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+           </ul>
+           
+           <div class="webDesign col-2">
                <h3>Web-design</h3>
                <p>
                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, assumenda.
@@ -96,15 +119,13 @@
            </div>
            
            <div class="develop">
-               
                <h3>Developing</h3>
                <p>
                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, assumenda.
                </p>
            </div>
            
-           <div class="optimisation">
-               
+           <div class="optimisation">   
                <h3>CEO-Optimisation</h3>
                <p>
                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, assumenda.
@@ -112,7 +133,6 @@
            </div>
            
            <div class="marketing">
-               
                <h3>Marketing</h3>
                <p>
                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, assumenda.
@@ -160,17 +180,17 @@
             
             <div class="siteType">
                 <h4>Type of Site</h4>
-                <input type="text">
+                <select type="text"></select>
             </div>
             
             <div class="design">
                 <h4>Design</h4>
-                <input type="text">
+                <select type="text"></select>
             </div>
             
             <div class="adaptivity">
                 <h4>Adaptivity</h4>
-                <input type="text">
+                <select type="text"></select>
             </div>
                 
             <div class="counterLine"></div>
@@ -192,45 +212,49 @@
         
         <div class="statistics">
             <h2>Statistics</h2>
+            <div class="statLine"></div>
         </div>
-        
-        <div class="statLine"></div>
-        
-        <div class="happy">
-            <img src="img/smile.png" alt="">
-            <h2>120</h2>
-            <p>Happy Customers</p>
-        </div>
-        
-        <div class="hours">
-            <img src="img/brackets.png" alt="">
-            <h2>4000</h2>
-            <p>Work Hours</p>
-        </div>
-        
-        <div class="doneProjects">
-            <img src="img/agree.png" alt="">
-            <h2>340</h2>
-            <p>Projects Done</p>
-        </div>
-        
-        <div class="achiv">
-            <img src="img/cup.png" alt="">
-            <h2>24</h2>
-            <p>Achievments get</p>
+            
+        <div class="statBlocks">
+            <div class="happy">
+                <img src="img/smile.png" alt="">
+                <h2>120</h2>
+                <p>Happy Customers</p>
+            </div>
+
+            <div class="hours">
+                <img src="img/brackets.png" alt="">
+                <h2>4000</h2>
+                <p>Work Hours</p>
+            </div>
+
+            <div class="doneProjects">
+                <img src="img/agree.png" alt="">
+                <h2>340</h2>
+                <p>Projects Done</p>
+            </div>
+
+            <div class="achiv">
+                <img src="img/cup.png" alt="">
+                <h2>24</h2>
+                <p>Achievments get</p>
+            </div>
         </div>
     </section>
     
     <section class="testimonialPresent">
         <div class="testimonials">
-            <h2>TESTIMONIALS</h2>
-            <img src="img/man.png" alt="">
             <div class="testLine"></div>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, vel dolor recusandae facilis! Officiis vitae quam, iure repellendus cum, autem dolore tempore qui similique ipsa?
-            </p>
-            <p id="name">Michael</p>
-            
+            <h2>TESTIMONIALS</h2>
+            <div class="card" id="slide">
+                <img src="img/man.png" alt="">
+           
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, vel dolor recusandae facilis! Officiis vitae quam, iure repellendus cum, autem dolore tempore qui similique ipsa?
+                </p>
+                
+                <p id="name">Michael</p>
+            </div>
         </div>
     </section>
     
@@ -297,5 +321,9 @@
             </p>
         </div>
     </footer>
+    
+    <script>
+        
+    </script>
 </body>
 </html>

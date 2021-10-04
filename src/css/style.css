@@ -7,8 +7,6 @@ nav{
     width: 100%;
     height: 60px;
     background: #344051;
-    display: flex;
-    justify-content: space-between;
     position: fixed;
     z-index: 1;
 }
@@ -16,8 +14,6 @@ nav{
 .logo{
     line-height: 60px;
     font-size: 20px;
-    padding-left: 280px;
-    float: left;
     color: #fff;
     -webkit-animation: come 2s;
     -o-animation: come 2s ;
@@ -34,16 +30,10 @@ nav{
     }
 }
 
-.menu ul{
-    margin-right: 50px;
-}
-
-.menu ul li{
+.menu li{
     float: left;
-    line-height: 60px;
-    display: inline-block;
-    position: relative;
-    padding-right:30px;
+    line-height: 30px;
+    padding-right:5%;
     -webkit-animation: drop 1s forwards;
     -o-animation: drop 1s forwards;
     animation: drop 1s forwards;
@@ -53,6 +43,7 @@ nav{
 .menu ul li a{
     font-size: 13px;
     color: #fff;
+    text-decoration: none;
 }
 
 .menu ul li::after{
@@ -61,7 +52,7 @@ nav{
 	height: 2px;
 	background: #fff;
 	display: block;
-	margin: -10px 0 0 0;
+	margin: 0px 0 0 0;
     border-radius: 5px;
 	transition: 0.5s;
 }
@@ -100,17 +91,15 @@ nav{
 /*MAIN PAGE*/
 .main{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: linear-gradient(rgba(245, 245, 220, 0.2), rgba(245, 245, 220, 1));
-
 }
 
 .title-container{
-    float: left;
+
     text-align: center;
-    margin-top: 300px;
-    margin-left: 280px;
     display: block;
+    padding-top: 250px;
 }
 
 .title-container h1{
@@ -153,18 +142,6 @@ nav{
     animation-delay: 2.4s;
 }
 
-/*#firstBtn{
-    opacity: 0;
-    animation: appearMain 0.7s  forwards;
-    animation-delay: 3.2s;
-}
-
-#secondBtn{
-    opacity: 0;
-    animation: appearMain 0.7s  forwards;
-    animation-delay: 2.8s;
-}*/
-
 .title-container .mainBtns input:hover{
     background: #6d7682; 
     color:beige;
@@ -189,10 +166,9 @@ nav{
 }
 
 .title-portrait img{
-    float: left;
     position: relative;
-    margin:-399px 0 0 860px;
-    display: block;
+    display: flex;
+    margin-top: -385px;
     opacity: 0;
     animation: imgAppear 1s forwards;
 }
@@ -212,26 +188,20 @@ nav{
 
 /*ABOUT ME PAGE*/
 
-.about-me{
+.about{
     background: #fff;
     height: 50vh;
     box-shadow: 0 -2px 90px #7e8185;
 }
 
 .about-me-title{
-    float: left;
-    text-align: center;
-    display: block;
-    margin:30px 0 0 650px;
 }
 
-.about-text-line{
-    float: left;
-    content: '';
+.about-me-title::after{
+    content: "";
     height: 2px;
     background: #f44336;
     width: 70px;
-    margin: 70px 100px 0 -100px;
     display: block;
 }
 
@@ -242,35 +212,25 @@ nav{
 }
 
 .portrait img{
-    float: left;
-    display: flex;
     border-radius: 50%;
     height: 150px;
     width: 150px;
-    text-align: center;
-    margin: 90px 0 0 -215px;
-    
 }
 
 .about-me-desc{
-    float: left;
     text-align: center;
-    margin:195px 0 0 200px;
 }
 
 .about-me-desc p {
-    padding-bottom: 30px;
     color: #2c384a;
-    line-height: 8px;
+    line-height:10px;
 }
 
 .about-me input{
-    float: left;
-    margin: 275px 0 0 -575px;
     background: none;
     border: 1px solid #6d7682;
     height: 40px;
-    padding: 0 20px;
+    padding: 0 10px;
     border-radius: 5px;
     color: #6d7682;
     font-size: 16px;
@@ -358,7 +318,7 @@ nav{
     float: left;
     text-align: center;
     width: 200px;
-    margin: 15px 0 0 50px;
+    margin: 0px 0 0 50px;
     transition: 0.5s;
 }
 
@@ -658,8 +618,9 @@ nav{
 }
 
 .statistics{
-    float:left; 
-    margin: 50px 0 50px 650px;
+    display:block;
+    text-align: center;
+    padding: 50px;
 }
 
 .statistics h2{
@@ -668,19 +629,23 @@ nav{
 }
 
 .statLine{
-    float: left;
     content: '';
     height: 4px;
     background: #f44336;
     width: 85px;
-    margin: 100px 0 0 -98px;
+    margin:30px 0 0 630px;
+}
+
+.statBlocks{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    text-align: center;
 }
 
 .happy{
-    float: left;
-    text-align: center;
-    margin: 200px 0 0 -420px;
     transition: 0.5s;
+    
 }
 
 .happy:hover{
@@ -693,7 +658,7 @@ nav{
     font-size: 23px;
     text-transform: uppercase;
     word-spacing: -1px;
-    margin: 15px 0 10px 0;
+    padding: 10px;
 }
 
 .happy p{
@@ -701,9 +666,6 @@ nav{
 }
 
 .hours{
-    float: left;
-    text-align: center;
-    margin: 200px 0 0 -190px;
     transition: 0.5s;
 }
 
@@ -717,7 +679,7 @@ nav{
     font-size: 23px;
     text-transform: uppercase;
     word-spacing: -1px;
-    margin: 20px 0 10px 0;
+    padding: 10px;
 }
 
 .hours p{
@@ -725,9 +687,6 @@ nav{
 }
 
 .doneProjects{
-    float: left;
-    text-align: center;
-    margin: 200px 0 0 0px;
     transition: 0.5s;
 }
 
@@ -741,7 +700,7 @@ nav{
     font-size: 23px;
     text-transform: uppercase;
     word-spacing: -1px;
-    margin: 20px 0 10px 0;
+    padding: 10px;
 }
 
 .doneProjects p{
@@ -749,9 +708,6 @@ nav{
 }
 
 .achiv{
-    float: left;
-    text-align: center;
-    margin: 200px 0 0 100px;
     transition: 0.5s;
 }
 
@@ -765,7 +721,7 @@ nav{
     font-size: 23px;
     text-transform: uppercase;
     word-spacing: -1px;
-    margin: 15px 0 10px 0;
+    padding: 1
 }
 
 /*TESTIMONIALS*/
@@ -775,9 +731,12 @@ nav{
 }
 
 .testimonials{
-    float: left;
     text-align: center;
-    margin: 50px 0 0 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 50px;
 }
 
 .testimonials h2{
@@ -785,7 +744,7 @@ nav{
     font-size: 30px;
     text-transform: uppercase;
     word-spacing: -1px;
-    margin-bottom: 20px;
+    margin-top: -50px;
 }
 
 .testLine{
@@ -794,24 +753,40 @@ nav{
     height: 4px;
     background: #f44336;
     width: 85px;
-    margin: 0px 0 0 305px;
+    margin-top: 30px;
 }
 
-.testimonials img{
-    margin: 30px 0 20px -400px;
+.card img{
+    margin: 40px 0 30px 0;
 }
 
-.testimonials p{
-    margin-bottom: 10px;
+.card p{
+    margin-top: 5px;
     width: 700px;
     color: #2c384a;
     font-size: 17px;
+    line-height: 26px;
+    
 }
 
 #name{
-    margin-top: 40px;
+    margin-top: 22px;
     font-size: 20px;
     font-weight: bold;
+}
+
+.arrows img{
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    position: relative;
+    top: -100px;
+    left: 50px;
+    margin: 320px;
+}
+
+#rightArrow{
+    transform: rotate(180deg);
 }
 
 /*FOOTER*/
